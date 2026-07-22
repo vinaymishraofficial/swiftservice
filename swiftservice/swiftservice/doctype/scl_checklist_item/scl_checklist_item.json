@@ -1,0 +1,21 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 03:20:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["section", "verification", "status", "blocking", "remarks"],
+ "fields": [
+  {"fieldname": "section", "fieldtype": "Select", "label": "Section", "allow_on_submit": 1, "in_list_view": 1, "options": "Operational\nInventory\nCommercial\nWarranty\nAMC\nInstalled Base\nCustomer\nSLA\nDocuments", "default": "Operational"},
+  {"fieldname": "verification", "fieldtype": "Data", "label": "Verification", "allow_on_submit": 1, "in_list_view": 1, "reqd": 1},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "allow_on_submit": 1, "in_list_view": 1, "options": "Pass\nFail\nNA\nPending", "default": "Pending"},
+  {"fieldname": "blocking", "fieldtype": "Check", "label": "Blocking", "allow_on_submit": 1, "in_list_view": 1, "default": "1"},
+  {"fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks", "allow_on_submit": 1}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "SCL Checklist Item",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

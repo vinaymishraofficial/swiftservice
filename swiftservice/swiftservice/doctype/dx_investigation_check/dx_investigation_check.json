@@ -1,0 +1,19 @@
+{
+ "actions": [],
+ "creation": "2026-07-21 23:58:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["check_item", "result", "remarks"],
+ "fields": [
+  {"fieldname": "check_item", "fieldtype": "Data", "in_list_view": 1, "label": "Check", "reqd": 1, "allow_on_submit": 1},
+  {"default": "Pending", "fieldname": "result", "fieldtype": "Select", "in_list_view": 1, "label": "Result", "options": "Pending\nPass\nFail\nN/A", "allow_on_submit": 1},
+  {"fieldname": "remarks", "fieldtype": "Small Text", "in_list_view": 1, "label": "Remarks", "allow_on_submit": 1}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "DX Investigation Check",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,133 @@
+@import "frappe-ui/style.css";
+
+html,
+body,
+#app {
+	height: 100%;
+	margin: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+/* ── Pink brand accents (theme-aware) ───────────────────────── */
+:root {
+	/* Logo-aligned magenta / pink */
+	--ss-pink-50: 255 247 252;
+	--ss-pink-100: 253 232 245;
+	--ss-pink-200: 255 213 240;
+	--ss-pink-400: 232 120 168;
+	--ss-pink-500: 192 64 112;
+	--ss-pink-600: 168 48 96;
+	--ss-pink-700: 136 32 80;
+}
+
+.ss-shell .bg-blue-500 {
+	background-color: rgb(var(--ss-pink-500)) !important;
+}
+.ss-shell .hover\:bg-surface-blue-3:hover,
+.ss-shell .hover\:bg-blue-600:hover {
+	background-color: rgb(var(--ss-pink-600)) !important;
+}
+.ss-shell .text-ink-blue-3,
+.ss-shell .text-ink-blue-link {
+	color: rgb(var(--ss-pink-600)) !important;
+}
+.ss-shell .border-outline-blue-1 {
+	border-color: rgb(var(--ss-pink-200)) !important;
+}
+.ss-shell .ring-blue-400,
+.ss-shell .focus-visible\:ring-blue-400:focus-visible {
+	--tw-ring-color: rgb(var(--ss-pink-400)) !important;
+}
+
+/* Light only — soft pink surfaces (never force in dark) */
+:root:not([data-theme="dark"]) .ss-shell .bg-surface-blue-2 {
+	background-color: rgb(var(--ss-pink-100) / 0.9) !important;
+}
+:root:not([data-theme="dark"]) .ss-shell .bg-surface-selected {
+	background-color: rgb(var(--ss-pink-50)) !important;
+	box-shadow: inset 2px 0 0 0 rgb(var(--ss-pink-500));
+}
+
+[data-theme="dark"] .ss-shell .bg-surface-selected {
+	box-shadow: inset 2px 0 0 0 rgb(var(--ss-pink-500));
+}
+[data-theme="dark"] .ss-shell .text-ink-blue-3,
+[data-theme="dark"] .ss-shell .text-ink-blue-link {
+	color: rgb(var(--ss-pink-400)) !important;
+}
+
+.ss-pill-pink {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.375rem;
+	border-radius: 0.25rem;
+	padding: 0.125rem 0.375rem;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	font-weight: 500;
+	background-color: rgb(var(--ss-pink-100));
+	color: rgb(var(--ss-pink-700));
+}
+[data-theme="dark"] .ss-pill-pink {
+	background-color: rgb(87 15 62 / 0.45);
+	color: rgb(var(--ss-pink-200));
+}
+.ss-pill-pink-dot {
+	width: 0.375rem;
+	height: 0.375rem;
+	flex-shrink: 0;
+	border-radius: 9999px;
+	background-color: rgb(var(--ss-pink-500));
+}
+
+.ss-accent-bar {
+	background-color: rgb(var(--ss-pink-500));
+}
+.ss-accent-btn {
+	background-color: rgb(var(--ss-pink-500)) !important;
+	color: white !important;
+}
+.ss-accent-btn:hover {
+	background-color: rgb(var(--ss-pink-600)) !important;
+}
+
+/* Collapsed sidebar rail — keep icons centered, no clip */
+.ss-shell .w-12.border-r {
+	padding-left: 0.25rem !important;
+	padding-right: 0.25rem !important;
+}
+.ss-shell .w-12 .flex.w-full.items-center.justify-between {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	justify-content: center !important;
+}
+.ss-shell .w-12 button {
+	min-width: 0 !important;
+}
+.ss-rail-btn {
+	display: flex !important;
+	width: 100% !important;
+	justify-content: center !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+/* TextEditor readable in dark theme */
+[data-theme="dark"] .ss-shell .ProseMirror,
+[data-theme="dark"] .ss-shell .prose-sm {
+	color: rgb(var(--ink-gray-9, 243 244 246));
+}
+
+/* Portaled popovers above Dialog (create modal Link/Select/Date) */
+.ss-link-field-panel,
+.ss-filter-select-panel,
+.ss-create-modal-fields {
+	isolation: isolate;
+}
+[data-reka-popper-content-wrapper],
+[data-radix-popper-content-wrapper] {
+	z-index: 400 !important;
+}

@@ -1,0 +1,23 @@
+{
+ "actions": [],
+ "autoname": "VI-.YYYY.-.#####",
+ "creation": "2026-07-21 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["engineer", "warehouse", "item_code", "qty", "status"],
+ "fields": [
+  {"fieldname": "engineer", "fieldtype": "Link", "in_list_view": 1, "label": "Engineer", "options": "User", "reqd": 1},
+  {"fieldname": "warehouse", "fieldtype": "Link", "label": "Van Warehouse", "options": "Warehouse"},
+  {"fieldname": "item_code", "fieldtype": "Link", "in_list_view": 1, "label": "Item", "options": "Item", "reqd": 1},
+  {"default": "1", "fieldname": "qty", "fieldtype": "Float", "in_list_view": 1, "label": "Qty", "reqd": 1},
+  {"default": "In Van", "fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "In Van\nIssued\nReturned"}
+ ],
+ "modified": "2026-07-21 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SwiftService",
+ "name": "Van Inventory",
+ "owner": "Administrator",
+ "permissions": [{"create": 1, "delete": 1, "read": 1, "role": "System Manager", "write": 1}],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

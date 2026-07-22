@@ -1,0 +1,21 @@
+{
+ "actions": [],
+ "creation": "2026-07-21 23:58:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["component", "part_number", "serial_no", "qty", "failure_mode"],
+ "fields": [
+  {"fieldname": "component", "fieldtype": "Data", "in_list_view": 1, "label": "Component", "reqd": 1, "allow_on_submit": 1},
+  {"fieldname": "part_number", "fieldtype": "Data", "in_list_view": 1, "label": "Part Number", "allow_on_submit": 1},
+  {"fieldname": "serial_no", "fieldtype": "Data", "in_list_view": 1, "label": "Serial", "allow_on_submit": 1},
+  {"default": "1", "fieldname": "qty", "fieldtype": "Float", "in_list_view": 1, "label": "Qty", "allow_on_submit": 1},
+  {"fieldname": "failure_mode", "fieldtype": "Data", "in_list_view": 1, "label": "Failure Mode", "allow_on_submit": 1}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "DX Failed Component",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

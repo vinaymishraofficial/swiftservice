@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 00:10:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "qty",
+  "warehouse",
+  "batch_no",
+  "serial_nos",
+  "issue_source",
+  "stock_entry",
+  "issued_on",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "reqd": 1,
+   "options": "Item"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "reqd": 1,
+   "default": "1"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "label": "Batch No",
+   "allow_on_submit": 1,
+   "options": "Batch"
+  },
+  {
+   "fieldname": "serial_nos",
+   "fieldtype": "Small Text",
+   "label": "Serial Nos",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "issue_source",
+   "fieldtype": "Select",
+   "label": "Issue Source",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "options": "Service Warehouse\nEngineer Van\nRegional Warehouse\nCentral Warehouse\nSupplier Direct"
+  },
+  {
+   "fieldname": "stock_entry",
+   "fieldtype": "Data",
+   "label": "Stock Entry",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "issued_on",
+   "fieldtype": "Datetime",
+   "label": "Issued On",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks",
+   "allow_on_submit": 1
+  }
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "SPR Issued Item",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

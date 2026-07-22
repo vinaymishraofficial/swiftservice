@@ -1,0 +1,20 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 02:45:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["comment_type", "comment", "entered_by", "entered_on"],
+ "fields": [
+  {"fieldname": "comment_type", "fieldtype": "Select", "label": "Type", "allow_on_submit": 1, "in_list_view": 1, "options": "Positive\nComplaint\nSuggestion\nImprovement\nOther", "default": "Positive"},
+  {"fieldname": "comment", "fieldtype": "Small Text", "label": "Comment", "allow_on_submit": 1, "in_list_view": 1, "reqd": 1},
+  {"fieldname": "entered_by", "fieldtype": "Data", "label": "Entered By", "allow_on_submit": 1},
+  {"fieldname": "entered_on", "fieldtype": "Datetime", "label": "Entered On", "allow_on_submit": 1}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "FDBK Comment",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

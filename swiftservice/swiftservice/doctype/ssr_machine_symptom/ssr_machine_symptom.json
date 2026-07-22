@@ -1,0 +1,24 @@
+{
+ "actions": [],
+ "creation": "2026-07-21 23:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["symptom", "severity", "observation"],
+ "fields": [
+  {"fieldname": "symptom", "fieldtype": "Data", "in_list_view": 1, "label": "Symptom", "reqd": 1},
+  {"fieldname": "severity", "fieldtype": "Select", "in_list_view": 1, "label": "Severity", "options": "Low\nMedium\nHigh\nCritical"},
+  {"fieldname": "observation", "fieldtype": "Small Text", "in_list_view": 1, "label": "Observation"}
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-07-21 23:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SwiftService",
+ "name": "SSR Machine Symptom",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

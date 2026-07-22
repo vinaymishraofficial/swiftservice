@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "autoname": "field:engineer",
+ "creation": "2026-07-21 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["engineer", "employee", "full_name", "region", "city", "skills", "certifications", "product_expertise", "current_location", "workload", "max_open_jobs", "status"],
+ "fields": [
+  {"fieldname": "engineer", "fieldtype": "Link", "in_list_view": 1, "label": "Engineer", "options": "User", "reqd": 1, "unique": 1},
+  {"fieldname": "employee", "fieldtype": "Link", "label": "Employee", "options": "Employee"},
+  {"fieldname": "full_name", "fieldtype": "Data", "label": "Full Name"},
+  {"fieldname": "region", "fieldtype": "Data", "in_list_view": 1, "label": "Region"},
+  {"fieldname": "city", "fieldtype": "Data", "label": "City"},
+  {"fieldname": "skills", "fieldtype": "Small Text", "label": "Skills"},
+  {"fieldname": "certifications", "fieldtype": "Small Text", "label": "Certifications"},
+  {"fieldname": "product_expertise", "fieldtype": "Small Text", "label": "Product Expertise"},
+  {"fieldname": "current_location", "fieldtype": "Data", "label": "Current Location"},
+  {"default": "0", "fieldname": "workload", "fieldtype": "Int", "label": "Open Tickets"},
+  {"default": "5", "fieldname": "max_open_jobs", "fieldtype": "Int", "label": "Max Open Jobs"},
+  {"default": "Active", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Active\nOn Leave\nInactive"}
+ ],
+ "modified": "2026-07-21 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SwiftService",
+ "name": "Engineer Profile",
+ "owner": "Administrator",
+ "permissions": [{"create": 1, "delete": 1, "read": 1, "role": "System Manager", "write": 1}],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

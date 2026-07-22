@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 00:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "technician",
+  "activity",
+  "start_time",
+  "end_time",
+  "hours",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "technician",
+   "fieldtype": "Link",
+   "label": "Technician",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "reqd": 1,
+   "options": "User"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Data",
+   "label": "Activity",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "hours",
+   "fieldtype": "Float",
+   "label": "Hours",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks",
+   "allow_on_submit": 1
+  }
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "RO Technician Log",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 00:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "operation",
+  "technician",
+  "start_time",
+  "end_time",
+  "status",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "operation",
+   "fieldtype": "Data",
+   "label": "Operation",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "technician",
+   "fieldtype": "Link",
+   "label": "Technician",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "options": "User"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "options": "Pending\nIn Progress\nCompleted\nSkipped",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks",
+   "allow_on_submit": 1
+  }
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "RO Repair Operation",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

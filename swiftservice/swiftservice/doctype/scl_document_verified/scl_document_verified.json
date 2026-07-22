@@ -1,0 +1,20 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 03:20:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["document_type", "document_name", "doc_status", "verified"],
+ "fields": [
+  {"fieldname": "document_type", "fieldtype": "Data", "label": "Document Type", "allow_on_submit": 1, "in_list_view": 1, "reqd": 1},
+  {"fieldname": "document_name", "fieldtype": "Data", "label": "Document", "allow_on_submit": 1, "in_list_view": 1},
+  {"fieldname": "doc_status", "fieldtype": "Data", "label": "Status", "allow_on_submit": 1, "in_list_view": 1},
+  {"fieldname": "verified", "fieldtype": "Check", "label": "Verified", "allow_on_submit": 1, "in_list_view": 1, "default": "0"}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "SCL Document Verified",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

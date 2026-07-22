@@ -1,0 +1,989 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-07-21 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "company",
+  "branch",
+  "column_break_basic",
+  "posting_date",
+  "posting_time",
+  "status",
+  "service_request_type",
+  "customer_section",
+  "customer",
+  "contact_person",
+  "mobile_no",
+  "email_id",
+  "column_break_customer",
+  "customer_address",
+  "customer_type",
+  "customer_group",
+  "territory",
+  "product_section",
+  "installed_base",
+  "item_code",
+  "item_name",
+  "model_no",
+  "variant",
+  "column_break_product",
+  "serial_no",
+  "batch_no",
+  "machine_location",
+  "machine_photo",
+  "source_issue",
+  "warranty_section",
+  "warranty_applicable",
+  "warranty_start",
+  "warranty_end",
+  "column_break_warranty",
+  "warranty_status",
+  "warranty_type",
+  "extended_warranty",
+  "amc_section",
+  "amc_contract",
+  "amc_start",
+  "amc_end",
+  "column_break_amc",
+  "remaining_visits",
+  "amc_status",
+  "complaint_section",
+  "subject",
+  "complaint_type",
+  "complaint_category",
+  "complaint_sub_category",
+  "column_break_complaint",
+  "priority",
+  "severity",
+  "complaint_source",
+  "product_condition",
+  "machine_running",
+  "breakdown",
+  "asset_criticality",
+  "complaint_description",
+  "sla_section",
+  "sla_policy",
+  "response_due",
+  "column_break_sla",
+  "resolution_due",
+  "sla_status",
+  "sla_due_datetime",
+  "assignment_section",
+  "assigned_engineer",
+  "assigned_by",
+  "assignment_date",
+  "acceptance_time",
+  "column_break_assignment",
+  "service_coordinator",
+  "engineer_profile",
+  "employee",
+  "visit_section",
+  "planned_date",
+  "planned_time",
+  "actual_arrival",
+  "actual_completion",
+  "column_break_visit",
+  "total_travel_hours",
+  "total_service_hours",
+  "preferred_visit_window",
+  "geo_latitude",
+  "geo_longitude",
+  "diagnosis_section",
+  "diagnosis_result",
+  "root_cause_code",
+  "failure_code",
+  "resolution_summary",
+  "billing_section",
+  "chargeable",
+  "currency",
+  "labour_charge",
+  "travel_charge",
+  "column_break_billing",
+  "spare_charge",
+  "misc_charge",
+  "estimated_cost",
+  "actual_cost",
+  "closure_section",
+  "closure_reason",
+  "customer_signature",
+  "customer_rating",
+  "column_break_closure",
+  "customer_feedback_text",
+  "closed_by",
+  "closed_on",
+  "enterprise_section",
+  "downtime_start",
+  "downtime_end",
+  "production_impact",
+  "safety_impact",
+  "column_break_enterprise",
+  "regulatory_impact",
+  "escalation_level",
+  "parent_service_request",
+  "linked_pm_visit",
+  "media_section",
+  "complaint_images",
+  "complaint_videos",
+  "attachments",
+  "machine_symptoms",
+  "legacy_attachment_section",
+  "image_attachment",
+  "video_attachment",
+  "voice_note",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "SSR-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SSR-.YYYY.-.#####\nSR-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "label": "Branch"
+  },
+  {
+   "fieldname": "column_break_basic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "label": "Posting Time"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nOpen\nUnder Validation\nAssigned\nAccepted\nTravel Started\nReached Customer\nReached Site\nInspection\nWaiting Customer\nWaiting Spare\nRepair In Progress\nRepair\nTesting\nCustomer Verification\nCustomer Approval\nCompleted\nClosed\nCancelled",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "service_request_type",
+   "fieldtype": "Select",
+   "label": "Service Request Type",
+   "options": "Breakdown\nInstallation\nPM\nCalibration\nDemo\nTraining\nWarranty\nAMC"
+  },
+  {
+   "fieldname": "customer_section",
+   "fieldtype": "Section Break",
+   "label": "Customer"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Link",
+   "label": "Contact Person",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_customer",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Data",
+   "label": "Customer Type",
+   "fetch_from": "customer.customer_type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "label": "Customer Group",
+   "options": "Customer Group",
+   "fetch_from": "customer.customer_group",
+   "read_only": 1
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Territory",
+   "options": "Territory",
+   "fetch_from": "customer.territory"
+  },
+  {
+   "fieldname": "product_section",
+   "fieldtype": "Section Break",
+   "label": "Installed Product"
+  },
+  {
+   "fieldname": "installed_base",
+   "fieldtype": "Link",
+   "label": "Installed Product",
+   "options": "Installed Base"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "fetch_from": "installed_base.item_code"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "fetch_from": "item_code.item_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "model_no",
+   "fieldtype": "Data",
+   "label": "Model",
+   "fetch_from": "installed_base.model_no"
+  },
+  {
+   "fieldname": "variant",
+   "fieldtype": "Data",
+   "label": "Variant"
+  },
+  {
+   "fieldname": "column_break_product",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Link",
+   "label": "Serial Number",
+   "options": "Serial No",
+   "fetch_from": "installed_base.serial_no"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch",
+   "fetch_from": "installed_base.batch_no"
+  },
+  {
+   "fieldname": "machine_location",
+   "fieldtype": "Data",
+   "label": "Machine Location"
+  },
+  {
+   "fieldname": "machine_photo",
+   "fieldtype": "Attach Image",
+   "label": "Machine Photo"
+  },
+  {
+   "fieldname": "source_issue",
+   "fieldtype": "Link",
+   "label": "Issue",
+   "options": "Issue"
+  },
+  {
+   "fieldname": "warranty_section",
+   "fieldtype": "Section Break",
+   "label": "Warranty"
+  },
+  {
+   "default": "0",
+   "fieldname": "warranty_applicable",
+   "fieldtype": "Check",
+   "label": "Warranty Applicable"
+  },
+  {
+   "fieldname": "warranty_start",
+   "fieldtype": "Date",
+   "label": "Warranty Start",
+   "fetch_from": "installed_base.warranty_start_date"
+  },
+  {
+   "fieldname": "warranty_end",
+   "fieldtype": "Date",
+   "label": "Warranty End",
+   "fetch_from": "installed_base.warranty_end_date"
+  },
+  {
+   "fieldname": "column_break_warranty",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warranty_status",
+   "fieldtype": "Select",
+   "label": "Warranty Status",
+   "options": "In Warranty\nOut of Warranty\nExtended\nNot Applicable"
+  },
+  {
+   "fieldname": "warranty_type",
+   "fieldtype": "Data",
+   "label": "Warranty Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "extended_warranty",
+   "fieldtype": "Check",
+   "label": "Extended Warranty"
+  },
+  {
+   "fieldname": "amc_section",
+   "fieldtype": "Section Break",
+   "label": "AMC"
+  },
+  {
+   "fieldname": "amc_contract",
+   "fieldtype": "Link",
+   "label": "AMC Contract",
+   "options": "AMC Contract"
+  },
+  {
+   "fieldname": "amc_start",
+   "fieldtype": "Date",
+   "label": "AMC Start"
+  },
+  {
+   "fieldname": "amc_end",
+   "fieldtype": "Date",
+   "label": "AMC End"
+  },
+  {
+   "fieldname": "column_break_amc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remaining_visits",
+   "fieldtype": "Int",
+   "label": "Remaining Visits"
+  },
+  {
+   "fieldname": "amc_status",
+   "fieldtype": "Select",
+   "label": "AMC Status",
+   "options": "Active\nInactive\nExpired\nNot Applicable"
+  },
+  {
+   "fieldname": "complaint_section",
+   "fieldtype": "Section Break",
+   "label": "Complaint"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "complaint_type",
+   "fieldtype": "Select",
+   "label": "Complaint Type",
+   "options": "Breakdown\nPreventive Maintenance\nCalibration\nInstallation\nSoftware\nHardware\nQuality\nTraining\nSpare\nWarranty\nAMC"
+  },
+  {
+   "fieldname": "complaint_category",
+   "fieldtype": "Data",
+   "label": "Complaint Category"
+  },
+  {
+   "fieldname": "complaint_sub_category",
+   "fieldtype": "Data",
+   "label": "Complaint Sub Category"
+  },
+  {
+   "fieldname": "column_break_complaint",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "default": "P2",
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "label": "Severity",
+   "options": "P1\nP2\nP3\nP4"
+  },
+  {
+   "fieldname": "complaint_source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "Phone\nEmail\nWhatsApp\nPortal\nDealer\nSales Team\nMobile App\nQR Code\nPM Visit\nInstallation Follow-up\nAMC Visit"
+  },
+  {
+   "fieldname": "product_condition",
+   "fieldtype": "Select",
+   "label": "Product Condition",
+   "options": "Good\nDamaged\nIncomplete\nUnknown"
+  },
+  {
+   "default": "0",
+   "fieldname": "machine_running",
+   "fieldtype": "Check",
+   "label": "Machine Running"
+  },
+  {
+   "default": "0",
+   "fieldname": "breakdown",
+   "fieldtype": "Check",
+   "label": "Breakdown"
+  },
+  {
+   "fieldname": "asset_criticality",
+   "fieldtype": "Select",
+   "label": "Asset Criticality",
+   "options": "Critical\nHigh\nMedium\nLow"
+  },
+  {
+   "fieldname": "complaint_description",
+   "fieldtype": "Long Text",
+   "label": "Complaint Description"
+  },
+  {
+   "fieldname": "sla_section",
+   "fieldtype": "Section Break",
+   "label": "SLA"
+  },
+  {
+   "fieldname": "sla_policy",
+   "fieldtype": "Data",
+   "label": "SLA Policy"
+  },
+  {
+   "fieldname": "response_due",
+   "fieldtype": "Datetime",
+   "label": "Response Due",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "column_break_sla",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resolution_due",
+   "fieldtype": "Datetime",
+   "label": "Resolution Due",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "sla_status",
+   "fieldtype": "Select",
+   "label": "SLA Status",
+   "options": "On Track\nAt Risk\nBreached\nPaused",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "sla_due_datetime",
+   "fieldtype": "Datetime",
+   "label": "SLA Due (Legacy)",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "assignment_section",
+   "fieldtype": "Section Break",
+   "label": "Assignment"
+  },
+  {
+   "fieldname": "assigned_engineer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Assigned Engineer",
+   "options": "User",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "assigned_by",
+   "fieldtype": "Link",
+   "label": "Assigned By",
+   "options": "User",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "assignment_date",
+   "fieldtype": "Datetime",
+   "label": "Assignment Date",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "acceptance_time",
+   "fieldtype": "Datetime",
+   "label": "Acceptance Time",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "column_break_assignment",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_coordinator",
+   "fieldtype": "Link",
+   "label": "Service Coordinator",
+   "options": "User",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "engineer_profile",
+   "fieldtype": "Link",
+   "label": "Engineer Profile",
+   "options": "Engineer Profile",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "visit_section",
+   "fieldtype": "Section Break",
+   "label": "Visit"
+  },
+  {
+   "fieldname": "planned_date",
+   "fieldtype": "Date",
+   "label": "Planned Date",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "planned_time",
+   "fieldtype": "Time",
+   "label": "Planned Time",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "actual_arrival",
+   "fieldtype": "Datetime",
+   "label": "Actual Arrival",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "actual_completion",
+   "fieldtype": "Datetime",
+   "label": "Actual Completion",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "column_break_visit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_travel_hours",
+   "fieldtype": "Float",
+   "label": "Total Travel Hours",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "total_service_hours",
+   "fieldtype": "Float",
+   "label": "Total Service Hours",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "preferred_visit_window",
+   "fieldtype": "Data",
+   "label": "Preferred Visit Window",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "geo_latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "geo_longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "diagnosis_section",
+   "fieldtype": "Section Break",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "diagnosis_result",
+   "fieldtype": "Select",
+   "label": "Diagnosis Result",
+   "options": "Issue Fixed\nSpare Required\nFactory Repair\nReplacement Required\nNo Fault Found",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "root_cause_code",
+   "fieldtype": "Data",
+   "label": "Internal Root Cause Code",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "failure_code",
+   "fieldtype": "Data",
+   "label": "External Failure Code",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "resolution_summary",
+   "fieldtype": "Small Text",
+   "label": "Resolution Summary",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "billing_section",
+   "fieldtype": "Section Break",
+   "label": "Billing"
+  },
+  {
+   "default": "0",
+   "fieldname": "chargeable",
+   "fieldtype": "Check",
+   "label": "Chargeable",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "labour_charge",
+   "fieldtype": "Currency",
+   "label": "Labour Charge",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "travel_charge",
+   "fieldtype": "Currency",
+   "label": "Travel Charge",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "column_break_billing",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "spare_charge",
+   "fieldtype": "Currency",
+   "label": "Spare Charge",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "misc_charge",
+   "fieldtype": "Currency",
+   "label": "Misc Charge",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "actual_cost",
+   "fieldtype": "Currency",
+   "label": "Actual Cost",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "closure_section",
+   "fieldtype": "Section Break",
+   "label": "Closure"
+  },
+  {
+   "fieldname": "closure_reason",
+   "fieldtype": "Small Text",
+   "label": "Closure Reason",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "customer_signature",
+   "fieldtype": "Attach Image",
+   "label": "Customer Signature",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "customer_rating",
+   "fieldtype": "Select",
+   "label": "Customer Rating",
+   "options": "1\n2\n3\n4\n5",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "column_break_closure",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_feedback_text",
+   "fieldtype": "Small Text",
+   "label": "Customer Feedback",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "closed_by",
+   "fieldtype": "Link",
+   "label": "Closed By",
+   "options": "User",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "closed_on",
+   "fieldtype": "Datetime",
+   "label": "Closed On",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "enterprise_section",
+   "fieldtype": "Section Break",
+   "label": "Impact & Links",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "downtime_start",
+   "fieldtype": "Datetime",
+   "label": "Downtime Start",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "downtime_end",
+   "fieldtype": "Datetime",
+   "label": "Downtime End",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "production_impact",
+   "fieldtype": "Select",
+   "label": "Production Impact",
+   "options": "None\nLow\nMedium\nHigh",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "safety_impact",
+   "fieldtype": "Select",
+   "label": "Safety Impact",
+   "options": "None\nLow\nMedium\nHigh",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "column_break_enterprise",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "regulatory_impact",
+   "fieldtype": "Select",
+   "label": "Regulatory Impact",
+   "options": "None\nLow\nMedium\nHigh",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "escalation_level",
+   "fieldtype": "Select",
+   "label": "Escalation Level",
+   "options": "0\n1\n2\n3",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "parent_service_request",
+   "fieldtype": "Link",
+   "label": "Parent Service Request",
+   "options": "Swift Service Request"
+  },
+  {
+   "fieldname": "linked_pm_visit",
+   "fieldtype": "Link",
+   "label": "Linked PM Visit",
+   "options": "Preventive Maintenance Visit"
+  },
+  {
+   "fieldname": "media_section",
+   "fieldtype": "Section Break",
+   "label": "Media & Symptoms"
+  },
+  {
+   "fieldname": "complaint_images",
+   "fieldtype": "Table",
+   "label": "Complaint Images",
+   "options": "SSR Complaint Image",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "complaint_videos",
+   "fieldtype": "Table",
+   "label": "Complaint Videos",
+   "options": "SSR Complaint Video",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "SSR Attachment",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "machine_symptoms",
+   "fieldtype": "Table",
+   "label": "Machine Symptoms",
+   "options": "SSR Machine Symptom",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "legacy_attachment_section",
+   "fieldtype": "Section Break",
+   "label": "Legacy Attachments",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "image_attachment",
+   "fieldtype": "Attach Image",
+   "label": "Image",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "video_attachment",
+   "fieldtype": "Attach",
+   "label": "Video",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "voice_note",
+   "fieldtype": "Attach",
+   "label": "Voice Note",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Swift Service Request",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-07-21 23:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "SwiftService",
+ "name": "Swift Service Request",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Service Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 1,
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Service Coordinator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Field Engineer",
+   "share": 0,
+   "submit": 0,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

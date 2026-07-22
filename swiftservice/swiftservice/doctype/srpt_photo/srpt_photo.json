@@ -1,0 +1,19 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 01:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["image", "category", "caption"],
+ "fields": [
+  {"fieldname": "image", "fieldtype": "Attach Image", "label": "Image", "allow_on_submit": 1, "in_list_view": 1, "reqd": 1},
+  {"fieldname": "category", "fieldtype": "Select", "label": "Category", "allow_on_submit": 1, "in_list_view": 1, "options": "Before Service\nDuring Service\nAfter Service\nReplaced Parts\nMachine Label\nSerial Plate\nOther", "default": "During Service"},
+  {"fieldname": "caption", "fieldtype": "Data", "label": "Caption", "allow_on_submit": 1, "in_list_view": 1}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "SRPT Photo",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

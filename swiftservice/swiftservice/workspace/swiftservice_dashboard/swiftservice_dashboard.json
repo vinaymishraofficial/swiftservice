@@ -1,0 +1,45 @@
+{
+ "app": "swiftservice",
+ "charts": [
+  {"chart_name": "Service Request Trend", "label": "Service Request Trend"},
+  {"chart_name": "Service Status Distribution", "label": "Service Status Distribution"}
+ ],
+ "content": "[{\"id\":\"hdr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>SwiftService Dashboard</b></span>\",\"col\":12}},{\"id\":\"k1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Service Requests\",\"col\":3}},{\"id\":\"k2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Engineer Visits\",\"col\":3}},{\"id\":\"k3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active AMC Contracts\",\"col\":3}},{\"id\":\"k4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed Services This Month\",\"col\":3}},{\"id\":\"ch1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Service Request Trend\",\"col\":8}},{\"id\":\"ch2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Service Status Distribution\",\"col\":4}},{\"id\":\"r1\",\"type\":\"header\",\"data\":{\"text\":\"<b>Operational Reports</b>\",\"col\":12}},{\"id\":\"c1\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":6}}]",
+ "creation": "2026-07-21 00:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "insights",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "SwiftService Dashboard",
+ "links": [
+  {"hidden": 0, "is_query_report": 0, "label": "Reports", "link_count": 0, "onboard": 0, "type": "Card Break"},
+  {"hidden": 0, "is_query_report": 1, "label": "Swift Service Request Summary", "link_count": 0, "link_to": "Swift Service Request Summary", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "Engineer Visit Status", "link_count": 0, "link_to": "Engineer Visit Status", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 1, "label": "First Response Time for Issues", "link_count": 0, "link_to": "First Response Time for Issues", "link_type": "Report", "onboard": 0, "type": "Link"},
+  {"hidden": 0, "is_query_report": 0, "label": "Back to Home", "link_count": 0, "link_to": "SwiftService", "link_type": "Workspace", "onboard": 0, "type": "Link"}
+ ],
+ "modified": "2026-07-21 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SwiftService",
+ "name": "SwiftService Dashboard",
+ "number_cards": [
+  {"label": "Open Service Requests", "number_card_name": "Open Service Requests"},
+  {"label": "Pending Engineer Visits", "number_card_name": "Pending Engineer Visits"},
+  {"label": "Active AMC Contracts", "number_card_name": "Active AMC Contracts"},
+  {"label": "Completed Services This Month", "number_card_name": "Completed Services This Month"}
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [],
+ "title": "SwiftService Dashboard",
+ "type": "Workspace"
+}

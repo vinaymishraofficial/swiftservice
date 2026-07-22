@@ -1,0 +1,19 @@
+{
+ "actions": [],
+ "creation": "2026-07-21 23:58:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["video", "stage", "description"],
+ "fields": [
+  {"fieldname": "video", "fieldtype": "Attach", "in_list_view": 1, "label": "Video", "reqd": 1, "allow_on_submit": 1},
+  {"fieldname": "stage", "fieldtype": "Select", "in_list_view": 1, "label": "Stage", "options": "Inspection\nRepair", "allow_on_submit": 1},
+  {"fieldname": "description", "fieldtype": "Small Text", "in_list_view": 1, "label": "Description", "allow_on_submit": 1}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "DX Video",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

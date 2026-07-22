@@ -1,0 +1,23 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 01:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["activity", "engineer", "hours", "hourly_rate", "amount", "coverage", "remarks"],
+ "fields": [
+  {"fieldname": "activity", "fieldtype": "Data", "label": "Activity", "allow_on_submit": 1, "in_list_view": 1},
+  {"fieldname": "engineer", "fieldtype": "Link", "label": "Engineer", "allow_on_submit": 1, "options": "User"},
+  {"fieldname": "hours", "fieldtype": "Float", "label": "Hours", "allow_on_submit": 1, "in_list_view": 1, "default": "0"},
+  {"fieldname": "hourly_rate", "fieldtype": "Currency", "label": "Hourly Rate", "allow_on_submit": 1, "in_list_view": 1, "default": "0"},
+  {"fieldname": "amount", "fieldtype": "Currency", "label": "Total", "allow_on_submit": 1, "in_list_view": 1, "read_only": 1},
+  {"fieldname": "coverage", "fieldtype": "Select", "label": "Coverage", "allow_on_submit": 1, "in_list_view": 1, "options": "Chargeable\nWarranty\nAMC\nFOC\nGoodwill", "default": "Chargeable"},
+  {"fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks", "allow_on_submit": 1}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "BILL Labour Charge",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

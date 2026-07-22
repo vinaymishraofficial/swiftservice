@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 00:10:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "description",
+  "uom",
+  "required_qty",
+  "approved_qty",
+  "issued_qty",
+  "consumed_qty",
+  "returned_qty",
+  "warehouse",
+  "batch_no",
+  "serial_nos",
+  "estimated_cost",
+  "actual_cost",
+  "warranty_claimable",
+  "chargeable",
+  "stock_status",
+  "reserved_qty",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "reqd": 1,
+   "options": "Item"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "Uom",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "options": "UOM"
+  },
+  {
+   "fieldname": "required_qty",
+   "fieldtype": "Float",
+   "label": "Required Qty",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "reqd": 1,
+   "default": "1"
+  },
+  {
+   "fieldname": "approved_qty",
+   "fieldtype": "Float",
+   "label": "Approved Qty",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "issued_qty",
+   "fieldtype": "Float",
+   "label": "Issued Qty",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "consumed_qty",
+   "fieldtype": "Float",
+   "label": "Consumed Qty",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "returned_qty",
+   "fieldtype": "Float",
+   "label": "Returned Qty",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "label": "Batch No",
+   "allow_on_submit": 1,
+   "options": "Batch"
+  },
+  {
+   "fieldname": "serial_nos",
+   "fieldtype": "Small Text",
+   "label": "Serial Nos",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "actual_cost",
+   "fieldtype": "Currency",
+   "label": "Actual Cost",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "warranty_claimable",
+   "fieldtype": "Check",
+   "label": "Warranty Claimable",
+   "allow_on_submit": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "chargeable",
+   "fieldtype": "Check",
+   "label": "Chargeable",
+   "allow_on_submit": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "stock_status",
+   "fieldtype": "Select",
+   "label": "Stock Status",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "options": "Unknown\nAvailable\nPartial\nNot Available\nReserved",
+   "default": "Unknown"
+  },
+  {
+   "fieldname": "reserved_qty",
+   "fieldtype": "Float",
+   "label": "Reserved Qty",
+   "allow_on_submit": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks",
+   "allow_on_submit": 1
+  }
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "SPR Requested Item",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

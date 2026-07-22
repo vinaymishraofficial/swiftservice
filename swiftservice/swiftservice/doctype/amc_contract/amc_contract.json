@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "AMC-.YYYY.-.#####",
+ "creation": "2026-07-21 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "installed_base",
+  "start_date",
+  "end_date",
+  "free_visits",
+  "paid_visits",
+  "remaining_visits",
+  "status",
+  "auto_invoice",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "installed_base",
+   "fieldtype": "Link",
+   "label": "Installed Base",
+   "options": "Installed Base"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "free_visits",
+   "fieldtype": "Int",
+   "label": "Free Visits"
+  },
+  {
+   "default": "0",
+   "fieldname": "paid_visits",
+   "fieldtype": "Int",
+   "label": "Paid Visits"
+  },
+  {
+   "default": "0",
+   "fieldname": "remaining_visits",
+   "fieldtype": "Int",
+   "label": "Remaining Visits"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nExpired\nRenewal Due\nClosed"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_invoice",
+   "fieldtype": "Check",
+   "label": "Auto Invoice"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "AMC Contract",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-21 17:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "SwiftService",
+ "name": "AMC Contract",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "is_submittable": 1
+}

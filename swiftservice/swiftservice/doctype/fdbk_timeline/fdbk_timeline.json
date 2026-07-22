@@ -1,0 +1,20 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 02:45:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["activity", "user", "time", "remarks"],
+ "fields": [
+  {"fieldname": "activity", "fieldtype": "Data", "label": "Activity", "allow_on_submit": 1, "in_list_view": 1, "reqd": 1},
+  {"fieldname": "user", "fieldtype": "Link", "label": "User", "allow_on_submit": 1, "in_list_view": 1, "options": "User"},
+  {"fieldname": "time", "fieldtype": "Datetime", "label": "Time", "allow_on_submit": 1, "in_list_view": 1},
+  {"fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks", "allow_on_submit": 1}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "FDBK Timeline",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

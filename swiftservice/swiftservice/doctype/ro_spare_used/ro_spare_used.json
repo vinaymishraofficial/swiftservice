@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 00:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "qty",
+  "warehouse",
+  "batch_no",
+  "serial_no",
+  "cost",
+  "warranty_claimable",
+  "chargeable",
+  "spare_request"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "reqd": 1,
+   "options": "Item"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "reqd": 1,
+   "default": "1"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "allow_on_submit": 1,
+   "options": "Batch"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Cost",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "warranty_claimable",
+   "fieldtype": "Check",
+   "label": "Warranty Claimable",
+   "allow_on_submit": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "chargeable",
+   "fieldtype": "Check",
+   "label": "Chargeable",
+   "allow_on_submit": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "spare_request",
+   "fieldtype": "Link",
+   "label": "Spare Request",
+   "allow_on_submit": 1,
+   "options": "Spare Request"
+  }
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "RO Spare Used",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

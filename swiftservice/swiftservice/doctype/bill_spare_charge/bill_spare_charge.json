@@ -1,0 +1,25 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 01:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["item_code", "qty", "rate", "discount", "amount", "coverage", "serial_no", "spare_request", "tax_rate"],
+ "fields": [
+  {"fieldname": "item_code", "fieldtype": "Link", "label": "Item", "allow_on_submit": 1, "in_list_view": 1, "reqd": 1, "options": "Item"},
+  {"fieldname": "qty", "fieldtype": "Float", "label": "Qty", "allow_on_submit": 1, "in_list_view": 1, "default": "1"},
+  {"fieldname": "rate", "fieldtype": "Currency", "label": "Rate", "allow_on_submit": 1, "in_list_view": 1, "default": "0"},
+  {"fieldname": "discount", "fieldtype": "Currency", "label": "Discount", "allow_on_submit": 1, "default": "0"},
+  {"fieldname": "amount", "fieldtype": "Currency", "label": "Amount", "allow_on_submit": 1, "in_list_view": 1, "read_only": 1},
+  {"fieldname": "coverage", "fieldtype": "Select", "label": "Coverage", "allow_on_submit": 1, "in_list_view": 1, "options": "Chargeable\nWarranty\nAMC\nFOC\nGoodwill", "default": "Chargeable"},
+  {"fieldname": "serial_no", "fieldtype": "Data", "label": "Serial", "allow_on_submit": 1},
+  {"fieldname": "spare_request", "fieldtype": "Link", "label": "Spare Request", "allow_on_submit": 1, "options": "Spare Request"},
+  {"fieldname": "tax_rate", "fieldtype": "Float", "label": "Tax %", "allow_on_submit": 1, "default": "0"}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "BILL Spare Charge",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

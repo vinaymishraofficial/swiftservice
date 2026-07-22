@@ -1,0 +1,24 @@
+{
+ "actions": [],
+ "autoname": "KB-.#####",
+ "creation": "2026-07-21 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["title", "category", "item_code", "symptoms", "resolution", "status"],
+ "fields": [
+  {"fieldname": "title", "fieldtype": "Data", "in_list_view": 1, "label": "Title", "reqd": 1},
+  {"fieldname": "category", "fieldtype": "Select", "in_list_view": 1, "label": "Category", "options": "Hardware\nSoftware\nSpare\nCalibration\nInstallation\nOther"},
+  {"fieldname": "item_code", "fieldtype": "Link", "label": "Item", "options": "Item"},
+  {"fieldname": "symptoms", "fieldtype": "Text", "label": "Symptoms"},
+  {"fieldname": "resolution", "fieldtype": "Text Editor", "label": "Resolution"},
+  {"default": "Published", "fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Draft\nPublished"}
+ ],
+ "modified": "2026-07-21 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SwiftService",
+ "name": "Knowledge Base Article",
+ "owner": "Administrator",
+ "permissions": [{"create": 1, "delete": 1, "read": 1, "role": "System Manager", "write": 1}],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

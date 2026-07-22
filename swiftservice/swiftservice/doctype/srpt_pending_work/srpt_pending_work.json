@@ -1,0 +1,20 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 01:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["activity", "reason", "next_visit_date", "required_spare"],
+ "fields": [
+  {"fieldname": "activity", "fieldtype": "Data", "label": "Pending Activity", "allow_on_submit": 1, "in_list_view": 1, "reqd": 1},
+  {"fieldname": "reason", "fieldtype": "Small Text", "label": "Reason", "allow_on_submit": 1, "in_list_view": 1},
+  {"fieldname": "next_visit_date", "fieldtype": "Date", "label": "Next Visit Date", "allow_on_submit": 1, "in_list_view": 1},
+  {"fieldname": "required_spare", "fieldtype": "Data", "label": "Required Spare", "allow_on_submit": 1}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "SRPT Pending Work",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

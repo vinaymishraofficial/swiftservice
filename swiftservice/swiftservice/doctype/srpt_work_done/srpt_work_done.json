@@ -1,0 +1,21 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 01:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["activity", "engineer", "hours", "status", "remarks"],
+ "fields": [
+  {"fieldname": "activity", "fieldtype": "Data", "label": "Activity", "allow_on_submit": 1, "in_list_view": 1, "reqd": 1},
+  {"fieldname": "engineer", "fieldtype": "Link", "label": "Engineer", "allow_on_submit": 1, "in_list_view": 1, "options": "User"},
+  {"fieldname": "hours", "fieldtype": "Float", "label": "Hours", "allow_on_submit": 1, "in_list_view": 1, "default": "0"},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "allow_on_submit": 1, "in_list_view": 1, "options": "Pending\nIn Progress\nCompleted\nSkipped", "default": "Completed"},
+  {"fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks", "allow_on_submit": 1}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "SRPT Work Done",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

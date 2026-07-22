@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 00:10:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "qty_used",
+  "qty_returned",
+  "damaged_qty",
+  "scrap_qty",
+  "serial_nos",
+  "engineer_visit",
+  "reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "reqd": 1,
+   "options": "Item"
+  },
+  {
+   "fieldname": "qty_used",
+   "fieldtype": "Float",
+   "label": "Qty Used",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "reqd": 1,
+   "default": "1"
+  },
+  {
+   "fieldname": "qty_returned",
+   "fieldtype": "Float",
+   "label": "Qty Returned",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "damaged_qty",
+   "fieldtype": "Float",
+   "label": "Damaged Qty",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "scrap_qty",
+   "fieldtype": "Float",
+   "label": "Scrap Qty",
+   "allow_on_submit": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "serial_nos",
+   "fieldtype": "Small Text",
+   "label": "Serial Nos",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "engineer_visit",
+   "fieldtype": "Link",
+   "label": "Service Visit",
+   "allow_on_submit": 1,
+   "options": "Engineer Visit"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  }
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "SPR Consumed Item",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

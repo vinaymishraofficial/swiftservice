@@ -1,0 +1,20 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 01:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["discount_type", "description", "amount", "approved_by"],
+ "fields": [
+  {"fieldname": "discount_type", "fieldtype": "Select", "label": "Type", "allow_on_submit": 1, "in_list_view": 1, "options": "Customer\nAMC\nDealer\nManagement\nPromotional\nOther", "default": "Customer"},
+  {"fieldname": "description", "fieldtype": "Data", "label": "Description", "allow_on_submit": 1, "in_list_view": 1},
+  {"fieldname": "amount", "fieldtype": "Currency", "label": "Amount", "allow_on_submit": 1, "in_list_view": 1, "default": "0"},
+  {"fieldname": "approved_by", "fieldtype": "Link", "label": "Approved By", "allow_on_submit": 1, "options": "User"}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "BILL Discount",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

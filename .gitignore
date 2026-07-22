@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+
+.DS_Store
+
+# Frontend build/deps
+frontend/node_modules/
+frontend/dist/
+swiftservice/public/frontend/
+
+# Local env/editor
+.env
+.env.*
+.vscode/
+.idea/
+

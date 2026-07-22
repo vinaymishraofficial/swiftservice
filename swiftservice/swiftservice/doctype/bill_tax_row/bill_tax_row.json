@@ -1,0 +1,20 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 01:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["tax_type", "rate", "amount", "account_head"],
+ "fields": [
+  {"fieldname": "tax_type", "fieldtype": "Select", "label": "Tax", "allow_on_submit": 1, "in_list_view": 1, "options": "GST\nCGST\nSGST\nIGST\nTDS\nOther", "default": "GST"},
+  {"fieldname": "rate", "fieldtype": "Float", "label": "Rate %", "allow_on_submit": 1, "in_list_view": 1, "default": "0"},
+  {"fieldname": "amount", "fieldtype": "Currency", "label": "Amount", "allow_on_submit": 1, "in_list_view": 1, "default": "0"},
+  {"fieldname": "account_head", "fieldtype": "Link", "label": "Account", "allow_on_submit": 1, "options": "Account"}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "BILL Tax Row",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,20 @@
+{
+ "actions": [],
+ "creation": "2026-07-21 23:58:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["image", "stage", "caption", "timestamp"],
+ "fields": [
+  {"fieldname": "image", "fieldtype": "Attach Image", "in_list_view": 1, "label": "Image", "reqd": 1, "allow_on_submit": 1},
+  {"fieldname": "stage", "fieldtype": "Select", "in_list_view": 1, "label": "Stage", "options": "Before\nAfter\nInspection", "allow_on_submit": 1},
+  {"fieldname": "caption", "fieldtype": "Data", "in_list_view": 1, "label": "Caption", "allow_on_submit": 1},
+  {"fieldname": "timestamp", "fieldtype": "Datetime", "label": "Timestamp", "allow_on_submit": 1}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "DX Photo",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

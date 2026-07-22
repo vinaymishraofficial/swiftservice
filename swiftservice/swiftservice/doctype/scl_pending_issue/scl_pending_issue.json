@@ -1,0 +1,21 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 03:20:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["module", "reference", "issue", "blocking", "resolved"],
+ "fields": [
+  {"fieldname": "module", "fieldtype": "Data", "label": "Module", "allow_on_submit": 1, "in_list_view": 1},
+  {"fieldname": "reference", "fieldtype": "Data", "label": "Reference", "allow_on_submit": 1, "in_list_view": 1},
+  {"fieldname": "issue", "fieldtype": "Small Text", "label": "Issue", "allow_on_submit": 1, "in_list_view": 1, "reqd": 1},
+  {"fieldname": "blocking", "fieldtype": "Check", "label": "Blocking", "allow_on_submit": 1, "in_list_view": 1, "default": "1"},
+  {"fieldname": "resolved", "fieldtype": "Check", "label": "Resolved", "allow_on_submit": 1, "default": "0"}
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "SCL Pending Issue",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

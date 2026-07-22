@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "creation": "2026-07-22 00:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "inspector",
+  "inspection_date",
+  "result",
+  "ncr_reference",
+  "rework_required",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "inspector",
+   "fieldtype": "Link",
+   "label": "Inspector",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "options": "User"
+  },
+  {
+   "fieldname": "inspection_date",
+   "fieldtype": "Datetime",
+   "label": "Inspection Date",
+   "allow_on_submit": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Result",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "reqd": 1,
+   "options": "Pass\nFail\nRework"
+  },
+  {
+   "fieldname": "ncr_reference",
+   "fieldtype": "Data",
+   "label": "NCR",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "rework_required",
+   "fieldtype": "Check",
+   "label": "Rework Required",
+   "allow_on_submit": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks",
+   "allow_on_submit": 1
+  }
+ ],
+ "istable": 1,
+ "module": "SwiftService",
+ "name": "RO Quality Log",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

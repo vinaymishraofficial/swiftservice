@@ -1,0 +1,24 @@
+{
+ "actions": [],
+ "creation": "2026-07-21 23:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["file", "file_type", "remarks"],
+ "fields": [
+  {"fieldname": "file", "fieldtype": "Attach", "in_list_view": 1, "label": "File", "reqd": 1},
+  {"fieldname": "file_type", "fieldtype": "Data", "in_list_view": 1, "label": "Type"},
+  {"fieldname": "remarks", "fieldtype": "Small Text", "in_list_view": 1, "label": "Remarks"}
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-07-21 23:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SwiftService",
+ "name": "SSR Attachment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

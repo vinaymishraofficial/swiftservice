@@ -1,0 +1,26 @@
+{
+ "actions": [],
+ "autoname": "SE-.YYYY.-.#####",
+ "creation": "2026-07-21 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["service_request", "labour_amount", "travel_amount", "spare_amount", "total_amount", "notes", "sales_invoice", "status"],
+ "fields": [
+  {"fieldname": "service_request", "fieldtype": "Link", "in_list_view": 1, "label": "Service Request", "options": "Swift Service Request", "reqd": 1},
+  {"default": "0", "fieldname": "labour_amount", "fieldtype": "Currency", "label": "Labour"},
+  {"default": "0", "fieldname": "travel_amount", "fieldtype": "Currency", "label": "Travel"},
+  {"default": "0", "fieldname": "spare_amount", "fieldtype": "Currency", "label": "Spare"},
+  {"default": "0", "fieldname": "total_amount", "fieldtype": "Currency", "in_list_view": 1, "label": "Total", "read_only": 1},
+  {"fieldname": "notes", "fieldtype": "Small Text", "label": "Notes"},
+  {"fieldname": "sales_invoice", "fieldtype": "Data", "label": "Sales Invoice"},
+  {"default": "Draft", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Draft\nApproved\nInvoiced\nRejected"}
+ ],
+ "modified": "2026-07-21 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SwiftService",
+ "name": "Service Estimate",
+ "owner": "Administrator",
+ "permissions": [{"create": 1, "delete": 1, "read": 1, "role": "System Manager", "write": 1}],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
