@@ -1,8 +1,21 @@
+<p align="center">
+  <img src="./docs/swiftservice-logo.svg" alt="SwiftService Logo" width="120" />
+</p>
+
 # SwiftService
 
-SwiftService is a field-service operations app for Frappe/ERPNext with a dedicated Vue + `frappe-ui` frontend.
+SwiftService is an open-source field service management app for Frappe and ERPNext.
+It helps service teams run the full service lifecycle from complaint registration to engineer dispatch, on-site resolution, parts management, billing, and closure.
 
-It covers service requests, engineer assignment, engineer visits, diagnosis, spare flow, repair workflow, reporting, billing, and closure.
+Designed for fast-moving service operations, SwiftService combines a Frappe backend with a dedicated Vue + `frappe-ui` frontend, optimized for both office users and field engineers.
+
+## What SwiftService Solves
+
+- Tracks service requests with complete customer and product context
+- Assigns engineers and manages visit planning and follow-up visits
+- Supports GPS check-in/check-out, customer pinning, and navigation
+- Handles diagnosis, spare part demand, repair, replacement, and return flows
+- Connects with ERPNext for inventory movement, invoicing, and payment records
 
 ## Highlights
 
@@ -236,6 +249,12 @@ cd apps/swiftservice/frontend && yarn build
 bench --site <your-site> clear-cache
 ```
 
+## Community
+
+- [Contributing Guide](./CONTRIBUTING.md)
+- [Code of Conduct](./CODE_OF_CONDUCT.md)
+- [Security Policy](./SECURITY.md)
+
 ## Notes
 
 - This repo intentionally ignores `frontend/node_modules` and built frontend output.
@@ -243,4 +262,6 @@ bench --site <your-site> clear-cache
 
 ## License
 
-MIT
+GNU General Public License v3.0 (`GPL-3.0`)
+
+See [LICENSE](./LICENSE) for the full text.
