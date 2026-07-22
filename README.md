@@ -13,6 +13,146 @@ It covers service requests, engineer assignment, engineer visits, diagnosis, spa
 - Live tracking foundation (periodic live location push + ETA APIs)
 - ERPNext integration for stock, invoicing, and payment flows
 
+## End-to-End Service Flow
+
+```mermaid
+flowchart TD
+
+%% ===========================
+%% SALES & INSTALLATION
+%% ===========================
+
+A[Product Sold] --> B[Sales Order / Delivery]
+B --> C[Installation Note]
+C --> D[Installed Base<br/>Customer + Item + Serial Number]
+
+%% ===========================
+%% CUSTOMER COMPLAINT
+%% ===========================
+
+D --> E{Product Status}
+
+E -->|Warranty Active| F[Customer Raises Complaint]
+E -->|AMC Active| F
+E -->|Warranty Expired| F
+
+F --> G[Create Service Request / Issue]
+G --> H[Validate Warranty / AMC / SLA]
+H --> I[Fetch Service History]
+I --> J[Service Coordinator Review]
+
+%% ===========================
+%% ASSIGNMENT
+%% ===========================
+
+J --> K{Coordinator Decision}
+
+K -->|Assign Engineer| L[Engineer Assignment]
+K -->|Need More Information| M[Request Customer Details]
+M --> J
+
+L --> N[Visit Planning]
+N --> O[Customer Visit Confirmation]
+O --> P[Engineer Check-In]
+P --> Q[Inspection & Diagnosis]
+
+%% ===========================
+%% DIAGNOSIS
+%% ===========================
+
+Q --> R{Diagnosis Result}
+
+%% Fixed
+R -->|Issue Fixed| S[Repair Completed]
+
+%% Spare Required
+R -->|Spare Required| T[Create Spare Request]
+
+%% Factory Repair
+R -->|Factory Repair| U[Initiate RMA]
+
+%% Replacement
+R -->|Replacement Required| V[Replacement Approval]
+
+%% No Fault
+R -->|No Fault Found| W[Close with Report]
+
+%% ===========================
+%% SPARE REQUEST
+%% ===========================
+
+T --> X[Store Verification]
+
+X --> Y{Stock Available?}
+
+Y -->|Yes| Z[Issue Spare Parts]
+
+Y -->|No| AA[Purchase Request]
+AA --> AB[Purchase Order]
+AB --> AC[Purchase Receipt]
+AC --> Z
+
+Z --> AD[Engineer Receives Spare]
+AD --> AE[Repair Product]
+AE --> S
+
+%% ===========================
+%% FACTORY REPAIR
+%% ===========================
+
+U --> AF[Pickup Machine]
+AF --> AG[Receive at Factory]
+AG --> AH[Quality Inspection]
+AH --> AI[Repair Job]
+AI --> AJ[Testing]
+AJ --> AK[Dispatch to Customer]
+AK --> S
+
+%% ===========================
+%% REPLACEMENT
+%% ===========================
+
+V --> AL[Management Approval]
+AL --> AM[Replacement Challan]
+AM --> AN[Dispatch New Product]
+AN --> AO[Receive Old Product]
+AO --> AP[Serial Number Mapping]
+AP --> AQ[Warranty Transfer]
+AQ --> S
+
+%% ===========================
+%% CLOSURE
+%% ===========================
+
+S --> AR[Customer Verification]
+W --> AR
+
+AR --> AS[Generate Service Report]
+
+AS --> AT{Chargeable?}
+
+AT -->|Yes| AU[Sales Invoice]
+AT -->|No| AV[Free Warranty Service]
+
+AU --> AW[Customer Feedback]
+AV --> AW
+
+AW --> AX[Close Service Request]
+
+%% ===========================
+%% PREVENTIVE MAINTENANCE
+%% ===========================
+
+D --> BA[Maintenance Schedule]
+BA --> BB[Auto Generate Visit]
+BB --> BC[Assign Engineer]
+BC --> BD[Preventive Maintenance Visit]
+BD --> BE[Checklist]
+BE --> BF[Calibration]
+BF --> BG[PM Report]
+BG --> BH[Schedule Next Visit]
+```
+
 ## Tech Stack
 
 - Backend: Frappe (Python)
