@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./swiftservice/public/logo-white.svg" alt="SwiftService Logo" width="120" />
+  <img src="./swiftservice/public/logo-white.png" alt="SwiftService Logo" width="120" />
 </p>
 
 # SwiftService
